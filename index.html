@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platības kalkulatori</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row row-title">
+        <div class="col-xs-12">
+            <H1 id="head-title">Trijstūra laukuma kalkulators</H1>
+        </div>
+    </div>
+    <div class="row row-main">
+        <div class="col-xs-6 col-main-left">
+            <div class="calculator">
+                <div class="item clean" onclick="clean()">C</div>
+                <div class="item back" onclick="back()">&lArr;</div>
+                <div class="item" onclick="insert('7')">7</div>
+                <div class="item" onclick="insert('8')">8</div>
+                <div class="item" onclick="insert('9')">9</div>
+                <div class="item" onclick="insert('4')">4</div>
+                <div class="item" onclick="insert('5')">5</div>
+                <div class="item" onclick="insert('6')">6</div>
+                <div class="item" onclick="insert('1')">1</div>
+                <div class="item" onclick="insert('2')">2</div>
+                <div class="item" onclick="insert('3')">3</div>
+                <div class="item zero" onclick="insert('0')">0</div>
+                <div class="item" onclick="insert('.')">.</div>
+                <div class="item equal" onclick="equal()">=</div>
+                <div class="item prev-input" onclick="prevInput()">&UpArrow;</div>
+                <div class="item next-input" onclick="nextInput()">&DownArrow;</div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-main-right">
+            <div class="results">
+                <div class="results-item">
+                    Trījstūra pamats<br>
+                    <div class="results-item">a=<form name="inputa"><input type="text" name="texta" readonly></form>cm</div>
+                </div>
+                <div class="results-item">
+                    <img src="triangle.png" alt="Triangle area">
+                </div>
+                <div class="results-item">
+                    Trījstūra augstums<br>
+                    <div class="results-item">h=<form name="inputh"><input type="text" name="texth" readonly></form>cm</div>
+                </div>
+                <div class="results-item">
+                    <p>Trijstūra laukums: S = <span class="result-span" id="result_area_span"></span> cm2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-footer">
+        <div class="col-xs-12">
+            Nikolajs Govrovs<br>
+            10.a
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
